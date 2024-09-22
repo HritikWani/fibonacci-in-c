@@ -1,0 +1,19 @@
+//nth fibonacci number using formula F(n) = F(n-1) + F(n-2)
+
+#include<stdio.h>
+#include<conio.h>
+
+int F(int n){
+	if(n<=1){
+		return n;
+	}else{
+		return F(n-1)+F(n-2);
+	}
+}
+void main(){
+	int n;
+	printf("Which number do you want to print: ");
+	scanf("%d",&n);
+	printf("%d",F(n-1));
+	getch();
+}

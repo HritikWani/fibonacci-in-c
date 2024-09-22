@@ -1,0 +1,27 @@
+//fibonacci using for loop
+
+#include<stdio.h>
+#include<conio.h>
+
+void main(){
+	int a=0,b=1,next,n;
+	printf("How many numbers do you want to print: ");
+	scanf("%d",&n);
+	if(n==0){
+		printf("No number to show");
+	}else if(n==1){
+		printf("%d",a);
+	}else if(n>=2){
+		printf("\n%d %d ",a,b);
+		for(int i=0;i<n-2;i++){
+			next=a+b;
+			printf("%d ",next);
+			a=b;
+			b=next;
+		}
+		
+	}else{
+		printf("invalid response");
+	}
+	getch();
+}

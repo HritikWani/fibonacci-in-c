@@ -1,0 +1,30 @@
+//nth fibonacci number using while loop 
+
+#include<stdio.h>
+#include<conio.h>
+
+void main(){
+	int a=0,b=1,next,n;
+	printf("Which number do you want to print: ");
+	scanf("%d",&n);
+	if(n==0){
+		printf("No number to show");
+	}else if(n==1){
+		printf("%d",a);
+	}else if(n==2){
+		printf("%d",b);
+	}else if(n>2){
+		n=n-2;
+		while(n>0){
+			next=a+b;
+			a=b;
+			b=next;
+			n--;
+		}
+		printf("%d",next);
+		
+	}else{
+		printf("invalid response");
+	}
+	getch();
+}

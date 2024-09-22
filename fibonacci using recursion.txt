@@ -1,0 +1,34 @@
+//fibonacci using recursion
+
+#include<stdio.h>
+#include<conio.h>
+int newfibo(int a,int b, int n){
+	if(n>0){
+		int next;
+		next=a+b;
+		printf("%d ",next);
+		a=b;
+		b=next;
+		n=n-1;
+		if(n>0){
+			newfibo(a,b,n);
+		}
+	}
+	return 0;
+}
+void main(){
+	int a=0,b=1,next,n;
+	printf("How many numbers do you want to print: ");
+	scanf("%d",&n);
+	if(n==0){
+		printf("No number to show");
+	}else if(n==1){
+		printf("%d",a);
+	}else if(n>=2){
+		printf("\n%d %d ",a,b);
+		newfibo(a,b,n-2);
+	}else{
+		printf("invalid response");
+	}
+	getch();
+}
